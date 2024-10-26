@@ -1,4 +1,3 @@
-import 'dart:math';
 
 /*
 Create a function called Shuffler which takes a List of integer as an input
@@ -8,5 +7,5 @@ I.e, it should return a RANDOMIZED version of the list.
  */
 
 List<int> Shuffler(List<int> theList){
-
+return [];
 }

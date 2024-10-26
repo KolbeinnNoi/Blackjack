@@ -1,4 +1,3 @@
-import 'dart:io';
 
 /*
 Create two functions called
@@ -22,6 +21,6 @@ int PlaceBet(int bankRoll){
 return 0;
 }
 
-int BuyIn(){
+int BuyIn(int bankRoll){
 return 0;
 }

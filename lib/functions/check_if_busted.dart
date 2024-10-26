@@ -1,4 +1,3 @@
-import 'score_function.dart';
 
 /*
 Create a function called CheckIfBusted.

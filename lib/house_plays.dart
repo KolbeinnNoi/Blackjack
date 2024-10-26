@@ -1,6 +1,3 @@
-import 'functions/score_function.dart';
-import 'functions/card_namer.dart';
-import 'functions/deal_card.dart';
 
 /*
 Once the player is done with his turn (HitOrStay) the house will play.

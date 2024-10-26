@@ -1,5 +1,3 @@
-import 'score_function.dart';
-import 'card_namer.dart';
 
 /*
 Create a function that prints the current "Status" of the match,

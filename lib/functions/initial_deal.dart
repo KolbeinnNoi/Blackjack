@@ -1,5 +1,4 @@
-import 'draw_card.dart';
-
+import 'package:BlackJack/functions/functions.dart';
 /*
 Create a function called InitialDeal. This function should accept THREE lists
 of integers as an input: playerHand, dealerHand, deck
@@ -23,5 +22,9 @@ print(dealerHand); // Should print [2, 4]
  */
 
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
+  DrawCard(playerHand, deck);
+  DrawCard(houseHand, deck);
+  DrawCard(playerHand, deck);
+  DrawCard(houseHand, deck);
 
 }
