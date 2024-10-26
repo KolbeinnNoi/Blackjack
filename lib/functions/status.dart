@@ -18,7 +18,7 @@ void main (){
     print("House's Visible Score: $visibleHouseScore");
   }
 
-  int score(List<int> hand) {
+/*  int score(List<int> hand) {
 
     return hand.reduce((a, b) => a + b);
   }
@@ -27,5 +27,5 @@ void main (){
   String cardNamer(int card) {
     4
     return "Card $card";
-  }
+  }*/
 }
