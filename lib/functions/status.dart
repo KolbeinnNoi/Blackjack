@@ -1,10 +1,6 @@
 import 'score_function.dart';
 import 'card_namer.dart';
 
-import 'score_function.dart';
-import 'card_namer.dart';
-
-
 void main (){
 
   void Status(List<int> playerHand, List<int> houseHand) {

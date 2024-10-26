@@ -1,24 +1,33 @@
 import 'score_function.dart';
 
-/*
-Create a function called CheckIfBusted.
-
-This function should accept a List
-of integers (hand of cards) calculate the score, and return true if busted
-ie. score is above 21, and false if not busted.
-
-NOTE: You can work on this function before "Score function" is completed,
-just make sure to merge them once you are done.
-
-Example inputs
-
-[10 11 1] -> False
-[13 13 7] -> True
-[1 1 2] -> True
-...ie use output of score function and check if busted.
- */
+void main (){
 
 
-bool CheckIfBusted(List<int> hand){
-return false;
+bool CheckIfBusted(List<int> hand) {
+  int handScore = CalculateScore(hand);
+  return handScore > 21;
+}
+
+int CalculateScore(List<int> hand) {
+  int score = 0;
+  bool firstAceAsEleven = true;
+
+  for (int card in hand) {
+    if (card == 1) {
+      if (firstAceAsEleven) {
+        score += 11;
+        firstAceAsEleven = false;
+      } else {
+        score += 1;
+      }
+    } else if (card >= 11 && card <= 13) {
+      score += 10;
+    } else {
+      score += card;
+    }
+  }
+
+  return score;
+}
+
 }
