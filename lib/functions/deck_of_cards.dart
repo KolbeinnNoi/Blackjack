@@ -20,4 +20,3 @@ List<int> deckOfCards() {
   }
   return deckOfCards;
 }
-
