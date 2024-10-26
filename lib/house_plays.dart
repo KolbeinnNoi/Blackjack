@@ -1,6 +1,4 @@
-import 'functions/score_function.dart';
-import 'functions/card_namer.dart';
-import 'functions/deal_card.dart';
+import 'package:BlackJack/functions/functions.dart';
 
 /*
 Once the player is done with his turn (HitOrStay) the house will play.
@@ -17,6 +15,14 @@ and inform what card (if any) he draws next, after each draw of card,
 show the score of the house.
  */
 
-void HousePlays(List<int> houseHand, List<int> deck){
-
+void HousePlays(List<int> houseHand, List<int> deck) {
+  print('\nHouse plays:');
+  Status([], houseHand);
+  
+  while (CalculateScore(houseHand) < 17) {
+    DrawCard(houseHand, deck);
+    int drawnCard = houseHand.last;
+    print('House drew a ${CardNamer(drawnCard)}');
+    Status([], houseHand);
+  }
 }
