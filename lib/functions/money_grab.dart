@@ -34,7 +34,6 @@ if (intInput != null && intInput <= bankRoll) {
 }
 }
 
-
 int BuyIn(){
 int balance = 0;
 bool input = true;

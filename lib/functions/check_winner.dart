@@ -19,3 +19,6 @@ int CheckWinner(List<int> playerHand, List<int> houseHand, int currentBankRoll, 
   return 0;
 
 }
+
+
+// PlaceBet(BuyIn());
