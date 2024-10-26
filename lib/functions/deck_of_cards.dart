@@ -1,3 +1,5 @@
+import 'dart:io';
+import 'dart:math';
 /*
 Create a function called DeckOfCards that returns a brand new deck of cards.
 
@@ -8,8 +10,14 @@ the number 2 four times etc...
 Make this function return the List of integers.
  */
 
-List<int> DeckOfCards(){
-return [];
-}
 
+List<int> deckOfCards() {
+  List<int> deckOfCards = [];
+  for (int i = 0; i < 4; i++) {
+    for (int j = 1; j <= 13; j++) {
+      deckOfCards.add(j);
+    }
+  }
+  return deckOfCards;
+}
 
