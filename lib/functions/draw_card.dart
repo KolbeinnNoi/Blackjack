@@ -15,7 +15,6 @@ print(deck); // Should print [2, 3, 4, 5, 6]
 print(hand); // Should print [1]
 
  */
-
 void DrawCard(List<int> hand, List<int> deck){
-
+hand.add(deck.removeAt(0));
 }
