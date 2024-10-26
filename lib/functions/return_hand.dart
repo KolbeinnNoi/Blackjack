@@ -13,14 +13,10 @@ print(hand); // Should print []
 
 
 void ReturnHand(List<int> hand, List<int> deck){
-
+  deck.addAll(hand);
+  hand.clear();
 }
-
-/*
-Then create another function called ReturnHands that uses the above function
-and returns both houseHand and playerHand into the deck.
- */
-
-void ReturnHands(List<int> playerHand, List<int> houseHand, List<int> deck){
-
+void ReturnHands(List<int> playerHand, List<int> houseHand, List<int> deck) {
+  ReturnHand(playerHand, deck);
+  ReturnHand(houseHand, deck);
 }

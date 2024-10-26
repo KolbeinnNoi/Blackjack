@@ -16,6 +16,6 @@ print(hand); // Should print [1]
  */
 
 void DrawCard(List<int> hand, List<int> deck){
-hand.add(deck.removeAt(0));
+hand.add(deck.removeAt(0)); // draw a card from the deck and add it to the hand and remove it from the deck
 
 }

@@ -14,7 +14,29 @@ of the user, which should have decreased/increased based on if he won or not.
 
 
 
-int CheckWinner(List<int> playerHand, List<int> houseHand, int currentBankRoll, int currentBet){
-  return 0;
+import 'package:BlackJack/functions/functions.dart';
 
+int CheckWinner(List<int> playerHand, List<int> houseHand, int currentBankRoll, int currentBet) {
+  int playerScore = CalculateScore(playerHand);
+  int houseScore = CalculateScore(houseHand);
+  
+  print('\nPlayer score: $playerScore');
+  print('House score: $houseScore');
+  
+  if (playerScore > 21) {
+    print('Player busts! House wins.');
+    return currentBankRoll - currentBet;
+  } else if (houseScore > 21) {
+    print('House busts! Player wins.');
+    return currentBankRoll + currentBet;
+  } else if (playerScore > houseScore) {
+    print('Player wins!');
+    return currentBankRoll + currentBet;
+  } else if (houseScore > playerScore) {
+    print('House wins!');
+    return currentBankRoll - currentBet;
+  } else {
+    print('It\'s a tie!');
+    return currentBankRoll;
+  }
 }

@@ -4,22 +4,26 @@ import 'package:BlackJack/functions/functions.dart';
 void main() {
   Welcome();
   
-  int bankRoll = 1000;
+  var bankRoll = BuyIn();
   
-  List<int> deck = ShuffledDeck();
-  List<int> playerHand = [13, 14];
-  List<int> houseHand = [15, 16];
+  var deck = ShuffledDeck();
+  var playerHand = <int>[];
+  var houseHand = <int>[];
   
-  while (bankRoll == 1000) {
-
-    int currentBet = 10;
-
-
+  while (bankRoll > 0) {
+    print('\nCurrent bankroll: \$${bankRoll}');
+    var currentBet = PlaceBet(bankRoll);
+    
+    if (currentBet == 0) {
+      print('Thanks for playing!');
+      break;
+    }
+    
+    playerHand.clear();
+    houseHand.clear();
     InitialDeal(playerHand, houseHand, deck);
   
     Status(playerHand, houseHand);
-    print("playerHand: " + playerHand.toString());
-      print("houseHand: " + houseHand.toString());
     
     HitOrStay(playerHand, houseHand, deck);
     
@@ -36,5 +40,5 @@ void main() {
     }
   }
   
-  print("Game over! Thanks for playing!");
+  print('Game over! Final bankroll: \$${bankRoll}');
 }
