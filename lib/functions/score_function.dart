@@ -39,7 +39,7 @@ for(int card in hand) {
       score += 1;
     }
   } 
-  if (card >= 10) {
+  else if (card >= 10) {
     score += 10;
   } else {
     score += card;
