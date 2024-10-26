@@ -1,4 +1,3 @@
-import 'score_function.dart';
 
 void main (){
 

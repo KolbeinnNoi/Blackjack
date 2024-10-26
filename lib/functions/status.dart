@@ -1,5 +1,3 @@
-import 'score_function.dart';
-import 'card_namer.dart';
 
 void main (){
 
